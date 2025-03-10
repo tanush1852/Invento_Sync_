@@ -1,0 +1,17 @@
+flask
+flask-cors
+pymongo
+google-generativeai
+openai
+prophet
+pandas
+matplotlib
+seaborn
+langchain
+langchain_experimental
+langchain_google_genai
+python-dotenv
+# Add these dependencies for working with Google Sheets
+gspread
+oauth2client
+twilio

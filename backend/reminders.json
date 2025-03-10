@@ -1,0 +1,126 @@
+[
+    {
+        "date": "2025-01-14",
+        "content": {
+            "festival": "Makar Sankranti",
+            "goods": [
+                "Sweets (Til Laddu, Chikki)",
+                "Kites",
+                "Thread (Manjha)",
+                "Sesame Seeds"
+            ]
+        }
+    },
+    {
+        "date": "2025-01-26",
+        "content": {
+            "festival": "Republic Day",
+            "goods": [
+                "National Flags",
+                "Badges",
+                "Books related to Indian History",
+                "Sweets"
+            ]
+        }
+    },
+    {
+        "date": "2025-03-14",
+        "content": {
+            "festival": "Holi",
+            "goods": [
+                "Colors (Gulal)",
+                "Water Guns (Pichkaris)",
+                "Water Balloons",
+                "Sweets (Gujiya)",
+                "Snacks"
+            ]
+        }
+    },
+    {
+        "date": "2025-04-13",
+        "content": {
+            "festival": "Baisakhi",
+            "goods": [
+                "Sweets",
+                "New Clothes",
+                "Agricultural Tools (Symbolic)",
+                "Dry Fruits"
+            ]
+        }
+    },
+    {
+        "date": "2025-08-15",
+        "content": {
+            "festival": "Independence Day",
+            "goods": [
+                "National Flags",
+                "Badges",
+                "Kites",
+                "Sweets"
+            ]
+        }
+    },
+    {
+        "date": "2025-08-17",
+        "content": {
+            "festival": "Raksha Bandhan",
+            "goods": [
+                "Rakhi",
+                "Sweets",
+                "Dry Fruits",
+                "Gifts for Sisters",
+                "Greeting Cards"
+            ]
+        }
+    },
+    {
+        "date": "2025-08-25",
+        "content": {
+            "festival": "Janmashtami",
+            "goods": [
+                "Krishna Idols",
+                "Puja Items",
+                "Sweets (Makhan Mishri)",
+                "Decoration Materials"
+            ]
+        }
+    },
+    {
+        "date": "2025-09-01",
+        "content": {
+            "festival": "Onam",
+            "goods": [
+                "Flowers (for Pookalam)",
+                "Sweets",
+                "Traditional Clothing (Kasavu Saree)",
+                "Banana Chips"
+            ]
+        }
+    },
+    {
+        "date": "2025-10-05",
+        "content": {
+            "festival": "Dussehra",
+            "goods": [
+                "Sweets (Jalebi, Fafda)",
+                "Puja Items",
+                "Toys (Bow & Arrow)",
+                "Home Decor"
+            ]
+        }
+    },
+    {
+        "date": "2025-10-31",
+        "content": {
+            "festival": "Diwali",
+            "goods": [
+                "Sweets",
+                "Dry Fruits",
+                "Diyas & Candles",
+                "Electronics",
+                "Gift Items",
+                "Home Decor"
+            ]
+        }
+    }
+]

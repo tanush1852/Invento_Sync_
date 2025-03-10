@@ -1,0 +1,99 @@
+{
+  "Diwali": [
+    "Sweets",
+    "Dry Fruits",
+    "Diyas & Candles",
+    "Electronics",
+    "Gift Items",
+    "Home Decor"
+  ],
+  "Holi": [
+    "Colors (Gulal)",
+    "Water Guns (Pichkaris)",
+    "Water Balloons",
+    "Sweets (Gujiya)",
+    "Snacks"
+  ],
+  "Raksha Bandhan": [
+    "Rakhi",
+    "Sweets",
+    "Dry Fruits",
+    "Gifts for Sisters",
+    "Greeting Cards"
+  ],
+  "Navratri": [
+    "Puja Items (Incense, Camphor)",
+    "Garba Sticks (Dandiya)",
+    "Fasting Foods (Sabudana)",
+    "Traditional Clothing (Chaniya Choli)"
+  ],
+  "Dussehra": [
+    "Sweets (Jalebi, Fafda)",
+    "Puja Items",
+    "Toys (Bow & Arrow)",
+    "Home Decor"
+  ],
+  "Ganesh Chaturthi": [
+    "Ganesh Idols",
+    "Puja Items (Modak)",
+    "Flowers",
+    "Decoration Materials"
+  ],
+  "Janmashtami": [
+    "Krishna Idols",
+    "Puja Items",
+    "Sweets (Makhan Mishri)",
+    "Decoration Materials"
+  ],
+  "Makar Sankranti": [
+    "Sweets (Til Laddu, Chikki)",
+    "Kites",
+    "Thread (Manjha)",
+    "Sesame Seeds"
+  ],
+  "Republic Day": [
+    "National Flags",
+    "Badges",
+    "Books related to Indian History",
+    "Sweets"
+  ],
+  "Independence Day": [
+    "National Flags",
+    "Badges",
+    "Kites",
+    "Sweets"
+  ],
+  "Eid": [
+    "Dry Fruits",
+    "Sweets (Seviyan)",
+    "Dates",
+    "Attar (Perfume)",
+    "New Clothes"
+  ],
+  "Christmas": [
+    "Christmas Trees",
+    "Ornaments",
+    "Cakes",
+    "Chocolates",
+    "Gifts"
+  ],
+  "Baisakhi": [
+    "Sweets",
+    "New Clothes",
+    "Agricultural Tools (Symbolic)",
+    "Dry Fruits"
+  ],
+  "Onam": [
+    "Flowers (for Pookalam)",
+    "Sweets",
+    "Traditional Clothing (Kasavu Saree)",
+    "Banana Chips"
+  ],
+  "Pongal": [
+    "Rice",
+    "Jaggery",
+    "Milk",
+    "New Clay Pots",
+    "Sugarcane"
+  ]
+}
