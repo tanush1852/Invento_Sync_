@@ -24,8 +24,8 @@ from googleapiclient.discovery import build
 load_dotenv()
 MONGO_URI = ""
 DB_NAME = ""
-GEMINI_API_KEY = "AIzaSyDyS3MDtriKTOr0dSSbjj6dAacbqEe2wuU"
-genai.configure(api_key="AIzaSyDyS3MDtriKTOr0dSSbjj6dAacbqEe2wuU")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+genai.configure(api_key=GEMINI_API_KEY)
 llm_interface = LLMModelInterface()
 
 app = Flask(__name__)

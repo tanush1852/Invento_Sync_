@@ -5,20 +5,22 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import requests
 from twilio.rest import Client
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
 # Telegram Bot Credentials
-BOT_TOKEN = "7816940525:AAHrHSV8dLJU0fthO1KPq1ippAeJpczD5hY"
-CHAT_ID = "1219722877"
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+CHAT_ID = os.getenv('CHAT_ID')
 
 # Twilio configuration
-TWILIO_ACCOUNT_SID = 'AC590835ca165e023069e60eeb43318808'
-TWILIO_AUTH_TOKEN = '33bbfe42aaf54fcecccd447adc97ea97'
+TWILIO_ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID')
+TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
 TWILIO_WHATSAPP_FROM = "whatsapp:+14155238886"
-WHATSAPP_TO = "whatsapp:+918657264290"
+WHATSAPP_TO =   os.getenv('WHATSAPP_TO')
 
 # Email credentials
 SENDER_EMAIL = "tanush1852@gmail.com"
-SENDER_PASSWORD = "jznc oexc xzlc fbck"
+SENDER_PASSWORD =   os.getenv('SENDER_PASSWORD')
 
 # Function to send Telegram message
 def send_telegram_message(text):

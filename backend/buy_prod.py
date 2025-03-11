@@ -3,7 +3,9 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from datetime import datetime
 from flask_cors import CORS
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
@@ -11,7 +13,7 @@ CORS(app)  # Enable CORS for all routes
 
 
 # ✅ Google Sheets Setup
-SHEET_URL = "https://docs.google.com/spreadsheets/d/14aYs1p_HCs60uDzaaoBhEutT3KuoG58uMGC__vfdo78/edit?usp=sharing"
+SHEET_URL = os.getenv("SHEET_URL")
 
 # ✅ Authenticate Google Sheets API
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]

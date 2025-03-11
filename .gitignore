@@ -1,2 +1,7 @@
 .env
 *.env
+
+python-backend/modules/credentials.json
+python-backend/modules/credentials.json
+python-backend/twitter-clone-440006-ed01aaa3bd45.json
+python-backend/googledrive.json

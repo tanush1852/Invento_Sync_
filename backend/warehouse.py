@@ -3,7 +3,9 @@ from oauth2client.service_account import ServiceAccountCredentials
 import datetime
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
@@ -23,11 +25,11 @@ except Exception as e:
 warehouse_store_mapping = {
     "warehouse1": {
         "source_url": "https://docs.google.com/spreadsheets/d/1ZMK_TWm6HGPK2REJ007Sm-DDwglKZmIMPBN4EUWHMaw/edit?usp=sharing",
-        "target_url": "https://docs.google.com/spreadsheets/d/14aYs1p_HCs60uDzaaoBhEutT3KuoG58uMGC__vfdo78/edit?usp=sharing"
+        "target_url": os.getenv("SHEET_URL")
     },
     "warehouse2": {
         "source_url": "https://docs.google.com/spreadsheets/d/1EiP1RMndWj9IG1tMVc9hC1z2wC8_hdYI0dir90Wu_S8/edit?usp=sharing",
-        "target_url": "https://docs.google.com/spreadsheets/d/14aYs1p_HCs60uDzaaoBhEutT3KuoG58uMGC__vfdo78/edit?usp=sharing"
+        "target_url": os.getenv("SHEET_URL")
     }
 }
 

@@ -11,13 +11,16 @@ import os
 import re
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 # ✅ Google Sheets Setup
-SHEET_URL = "https://docs.google.com/spreadsheets/d/14aYs1p_HCs60uDzaaoBhEutT3KuoG58uMGC__vfdo78/edit?usp=sharing"
+SHEET_URL = os.getenv("SHEET_URL")
 
 # ✅ Email settings
-EMAIL_SENDER = "tanush1852@gmail.com"
-EMAIL_PASSWORD = "jznc oexc xzlc fbck"
+EMAIL_SENDER = os.getenv("EMAIL_SENDER")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 EMAIL_RECEIVER = "tanush1852@gmail.com"
 
 # ✅ Authenticate Google Sheets API

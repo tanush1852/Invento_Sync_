@@ -4,13 +4,16 @@ import time
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from datetime import datetime
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 # ✅ Telegram Bot Credentials
-BOT_TOKEN = "7816940525:AAHrHSV8dLJU0fthO1KPq1ippAeJpczD5hY"
-CHAT_ID = "1219722877"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 
-# ✅ Google Sheets Setup
-SHEET_URL = "https://docs.google.com/spreadsheets/d/14aYs1p_HCs60uDzaaoBhEutT3KuoG58uMGC__vfdo78/edit?usp=sharing"
+# ✅ Google Sheets Setup"h
+SHEET_URL = os.getenv("SHEET_URL")
 
 # ✅ Authenticate Google Sheets API
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]

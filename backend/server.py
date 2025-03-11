@@ -3,12 +3,15 @@ from flask_cors import CORS
 import requests
 import google.generativeai as genai  # Gemini API
 import re  # Import regex for extracting numbers
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 # Set up Google Gemini API
-genai.configure(api_key="AIzaSyBPehLg83WKXg-klMHqv6HsaYow53CHZ6Q")
+GEMINI_API_KEY=os.getenv("GEMINI_API_KEY")
+genai.configure(api_key=GEMINI_API_KEY)
 
 @app.route('/get_travel_time', methods=['POST'])
 def get_travel_time():

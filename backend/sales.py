@@ -1,6 +1,9 @@
 from google.oauth2.service_account import Credentials
 import gspread
 import datetime
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 def authenticate_gsheet():
     creds = Credentials.from_service_account_file("twitter-clone-440006-ed01aaa3bd45.json", scopes=["https://www.googleapis.com/auth/spreadsheets"])
@@ -68,7 +71,7 @@ def add_product(sheet, product_name):
         print("New product added successfully.")
 
 if __name__ == "__main__":
-    SHEET_URL = "https://docs.google.com/spreadsheets/d/14aYs1p_HCs60uDzaaoBhEutT3KuoG58uMGC__vfdo78/edit?usp=sharing"
+    SHEET_URL = os.getenv("SHEET_URL")
     client = authenticate_gsheet()
     sheet = get_sheet(client, SHEET_URL)
     
@@ -149,7 +152,7 @@ def inventory_add():
         return jsonify({"error": "Missing product name"}), 400
     
     try:
-        SHEET_URL = "https://docs.google.com/spreadsheets/d/14aYs1p_HCs60uDzaaoBhEutT3KuoG58uMGC__vfdo78/edit?usp=sharing"
+        SHEET_URL = os.getenv("SHEET_URL")
         client = authenticate_gsheet()
         sheet = get_sheet(client, SHEET_URL)
         

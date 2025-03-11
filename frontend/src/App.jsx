@@ -13,7 +13,7 @@ import Suggestions from "./pages/Suggestions";
 import ChatSystem from "./pages/ChatSystem";
 import Maps from "./pages/Maps";
 import LandingPage from "./pages/LandingPage";
-import BuyProduct from "./pages/BuyProduct";
+import InventoryQRSystem from "./pages/Qr_Code";
 import MapsTest from "./pages/MapsTest";
 import WarehouseDashboard from "./pages/Warehouse";
 import WarehouseTransfer from "./pages/Warehouse_test";
@@ -108,7 +108,7 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <PrivateRoute>
-          <BuyProduct />
+          <InventoryQRSystem />
         </PrivateRoute>
       </Layout>
     ),

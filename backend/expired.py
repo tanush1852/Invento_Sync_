@@ -7,16 +7,19 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from twilio.rest import Client
 import requests
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 # Twilio configuration
-TWILIO_ACCOUNT_SID = 'AC590835ca165e023069e60eeb43318808'
-TWILIO_AUTH_TOKEN = '33bbfe42aaf54fcecccd447adc97ea97'
+TWILIO_ACCOUNT_SID =os.getenv('TWILIO_ACCOUNT_SID')
+TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')  
 TWILIO_WHATSAPP_FROM = "whatsapp:+14155238886"
-WHATSAPP_TO = "whatsapp:+918657264290"
+WHATSAPP_TO = os.getenv('WHATSAPP_TO')
 
 # Telegram Bot Credentials
-BOT_TOKEN = "7816940525:AAHrHSV8dLJU0fthO1KPq1ippAeJpczD5hY"
-CHAT_ID = "1219722877"
+BOT_TOKEN =os.getenv('BOT_TOKEN')
+CHAT_ID = os.getenv('CHAT_ID')
 
 # Store processed alerts
 processed_alerts = set()
@@ -43,7 +46,7 @@ def send_email(subject, body, sender_email, receiver_email):
     try:
         with smtplib.SMTP('smtp.gmail.com', 587) as server:
             server.starttls()
-            server.login(sender_email, "jznc oexc xzlc fbck")
+            server.login(sender_email, os.getenv('SENDER_PASSWORD'))
             server.sendmail(sender_email, receiver_email, msg.as_string())
     except Exception as e:
         print(f"Failed to send email: {e}")
@@ -59,7 +62,7 @@ def send_alerts(subject, body, alert_type):
     alert_key = f"{alert_type}:{body}"
     if alert_key not in processed_alerts:
         processed_alerts.add(alert_key)
-        send_email(subject, body, "tanush1852@gmail.com", "akhil.vaidya22@spit.ac.in")
+        send_email(subject, body, "tanush1852@gmail.com", "tanush.salian22@spit.ac.in")
         send_whatsapp(f"{alert_type} Alert:\n\n{body}")
         send_telegram_message(f"🚨 {alert_type} Alert:\n\n{body}")
 
@@ -129,7 +132,7 @@ def monitor_spreadsheet(sheet, interval=60):
         time.sleep(interval)
 
 if __name__ == "__main__":
-    SHEET_URL = "https://docs.google.com/spreadsheets/d/14aYs1p_HCs60uDzaaoBhEutT3KuoG58uMGC__vfdo78/edit?usp=sharing"
+    SHEET_URL =os.getenv('SHEET_URL')
     client = authenticate_gsheet()
     sheet = get_sheet(client, SHEET_URL)
     monitor_spreadsheet(sheet, interval=10)
