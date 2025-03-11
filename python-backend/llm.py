@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 
 load_dotenv()       
 # Set your Google API key
-google_api_key = "AIzaSyBPehLg83WKXg-klMHqv6HsaYow53CHZ6Q"
+google_api_key = os.getenv("GEMINI_API_KEY")
 
 # Initialize the Gemini model
 gemini_llm = ChatGoogleGenerativeAI(
